@@ -23,15 +23,23 @@
   </head>
   <body>
 
-    <div class="container">
+    <div id="container">
     </div>
+
+    <script type='text/template' id='home-container'>
+        <% _.each(people, function(person) { %>
+          <ul>
+            <li><%= person.get('name') %></li>
+            <li><%= person.get('bio') %></li>
+          </ul>
+      <% }); %>
+    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
-
     <!-- endbower -->
     <!-- endbuild -->
 
