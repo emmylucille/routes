@@ -15,8 +15,17 @@
   </head>
   <body>
 
-    <div class="container">
+    <div id="container">
     </div>
+
+    <script type='text/template' id='home-container'>
+        <% _.each(people, function(person) { %>
+          <ul>
+            <li><%= person.get('name') %></li>
+            <li><%= person.get('bio') %></li>
+          </ul>
+      <% }); %>
+    </script>
 
     <script src="scripts/vendor.js"></script>
 
